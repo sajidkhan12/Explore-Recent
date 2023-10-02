@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Recent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/white"
+        android:background="?attr/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="?attr/actionBarTheme"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Availability"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:id="@+id/textview1"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="9dp"
+        app:strokeColor="@color/black"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/cardview1">
+
+        <Spinner
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:id="@+id/spinner"
+            android:layout_gravity="center"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Your Status"
+        android:layout_marginStart="23dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:id="@+id/textview2"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        app:strokeColor="@color/black"
+        android:layout_marginTop="9dp"
+        app:cardCornerRadius="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/cardview2">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="330dp"
+                android:layout_height="70dp"
+                android:textSize="15sp"
+                android:maxLength="250"
+                android:layout_marginStart="9dp"
+                android:id="@+id/edittext1"/>
+
+
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="320dp"
+            android:textSize="18dp"
+            android:id="@+id/text1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/250"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:id="@+id/text2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Hyper local Distance"
+            android:layout_marginStart="23dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:id="@+id/textview3"/>
+
+        <com.google.android.material.slider.Slider
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:labelBehavior="withinBounds"
+            android:value="53"
+            app:labelStyle="@style/Widget.MaterialComponents.Slider"
+            android:id="@+id/slider"
+            android:valueFrom="0"
+            app:trackColorActive="#F31B1943"
+            app:thumbColor="#F31B1943"
+            android:valueTo="100" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/onekm"
+            android:text="1 Km"
+            android:textColor="#F31B1943"
+            android:layout_marginLeft="28dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hundredkm"
+            android:text="100 Km"
+            android:textColor="#F31B1943"
+            android:layout_marginLeft="270dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Purpose"
+        android:textColor="@color/black"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:id="@+id/text4"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:text="Coffee"
+            android:backgroundTint="#F31B1943"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn2"
+            android:text="Business"
+            android:backgroundTint="#F31B1943"
+            android:layout_marginLeft="6dp"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn3"
+            android:backgroundTint="#F31B1943"
+            app:strokeColor="@color/black"
+            android:textColor="@color/white"
+            app:strokeWidth="2dp"
+            android:text="Hobbies"
+            android:layout_marginLeft="6dp"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn4"
+            android:text="Friendship"
+            android:backgroundTint="#F31B1943"
+            android:layout_marginLeft="6dp"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn5"
+            android:text="Movies"
+            android:backgroundTint="@color/white"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            android:textColor="@color/black"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn6"
+            android:backgroundTint="@color/white"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            android:text="Dinning"
+            android:textColor="@color/black"
+            android:layout_marginLeft="6dp"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn7"
+            android:backgroundTint="@color/white"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            android:textColor="@color/black"
+
+            android:text="Dating"
+            android:layout_marginLeft="6dp"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn8"
+            android:backgroundTint="@color/white"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            android:text="Matrimony"
+            android:textColor="@color/black"
+            android:layout_marginLeft="6dp"
+            android:minWidth="8dp"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn9"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/black"
+            android:text="Save &amp; Explore"
+            android:textColor="@color/white"
+            android:layout_marginLeft="4dp"
+            android:minEms="15"
+            android:backgroundTint="#F31B1943"
+            android:textSize="12sp"
+            app:cornerRadius="20dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
